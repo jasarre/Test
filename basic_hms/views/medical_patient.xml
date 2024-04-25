@@ -251,6 +251,9 @@
                                                 <field name="dietary_supplement" />
                                                 <field name="coffee" />
                                                 <field name="coffee_cups" />
+                                                <field name="te" />
+                                                <field name="te_cups" modifiers="{'invisible': [('te', '=', False)]}" /> 
+
                                             </group>
                                             <group>
                                                 <field name="soft_drinks" />
@@ -271,6 +274,8 @@
                                                     <group>
                                                         <field
                                                             name="smoking" />
+                                                        <field name="smoking_comments" />
+
                                                         <field
                                                             name="smoking_number" />
                                                         <field
