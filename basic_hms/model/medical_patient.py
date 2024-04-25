@@ -12,6 +12,15 @@ class medical_patient(models.Model):
     _description = 'medical patient'
     _rec_name = 'patient_id'
 
+    consent_pdf = fields.Many2many(
+        comodel_name='ir.attachment',
+        relation='patient_consent_image_rel',
+        column1='patient_id',
+        column2='attachment_id',
+        string="Añadir archivo"
+    )
+
+
     @api.onchange('patient_id')
     def _onchange_patient(self):
         '''
