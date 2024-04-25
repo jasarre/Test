@@ -289,6 +289,11 @@ class medical_patient(models.Model):
 
     #AÑADO CAMPO date_admited 
     date_admitted = fields.Date(string="Fecha alta", default=lambda self: fields.Date.today())
+
+    #AÑADO CAMPOS QUE SE INCORPORAN A INFORMACIÓN GENERAL
+    blood_pressure = fields.Char(string='Tensión arterial')
+    operations = fields.Char(string='Operaciones')
+    aesthetic_operations = fields.Char(string='Operaciones de estética')
     
 
     def _valid_field_parameter(self, field, name):
