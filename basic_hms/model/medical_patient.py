@@ -274,6 +274,15 @@ class medical_patient(models.Model):
     full_term = fields.Integer('Full Term')
     ses_notes = fields.Text('Notes')
 
+    #AÑADO CAMPOS PARA MODIFICACIÓN DE LA SOLAPA ESTILO DE VIDA->DIETA Y EJERCICIO
+    breackfast = fields.Char(string='Desayuno')
+    lunch = fields.Char(string='Almuerzo')
+    dinner = fields.Char(string='Cena')
+    midmorning = fields.Char(string='Media mañana')
+    snack = fields.Char(string='Merienda')
+    water_per_day = fields.Integer(string='Litros de agua al día')
+    comment_habitos_alimentarios = fields.Text(string="Comentario sobre hábitos alimentarios")
+
     def _valid_field_parameter(self, field, name):
         return name == 'sort' or super()._valid_field_parameter(field, name)
 
