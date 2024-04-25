@@ -299,6 +299,7 @@ class medical_patient(models.Model):
 
     #AÑADO CAMPOS A ESTILO DE VIDA->ADICCIONES
     smoking_comments = fields.Char(string='Comentario tabaco')
+    alcohol_comments = fields.Char(string='Comentario alcohol')
     
 
     def _valid_field_parameter(self, field, name):
