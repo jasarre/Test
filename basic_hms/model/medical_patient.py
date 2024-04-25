@@ -47,11 +47,17 @@ class medical_patient(models.Model):
     patient_id = fields.Many2one('res.partner',domain=[('is_patient','=',True)],string="Patient", required= True)
     name = fields.Char(string='Id', readonly=True)
     last_name = fields.Char('Last name')
+    
     # AÑADO CAMPOS RELACIONADOS DE CONTACTOS:VAT, PHONE, MOBILE, EMAIL
     partner_vat = fields.Char(related='patient_id.vat', string='NIF', readonly=True)
     partner_phone = fields.Char(related='patient_id.phone', string='Phone', readonly=True)
     partner_mobile = fields.Char(related='patient_id.mobile', string='Mobile', readonly=True)
     partner_email = fields.Char(related='patient_id.email', string='Email', readonly=True)
+
+    #AÑADO CAMPOS QUE INCORPOO A LA VISTA DE PACIENTES
+    nuhsa = fields.Char(string="NUHSA")
+    nuss = fields.Integer(string="NUSS")
+
     
     date_of_birth = fields.Date(string="Date of Birth")
     sex = fields.Selection([('m', 'Male'),('f', 'Female')], string ="Sex")
