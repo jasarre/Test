@@ -286,6 +286,9 @@ class medical_patient(models.Model):
     bowel_habit_comment = fields.Char(string='Comentario hábito instestinal')
     digestions= fields.Char(string='Digestiones')
     dietary_supplement = fields.Char(string='Comp. alimenticio')
+
+    #AÑADO CAMPO date_admited 
+    date_admitted = fields.Date(string="Fecha alta", default=lambda self: fields.Date.today())
     
 
     def _valid_field_parameter(self, field, name):
