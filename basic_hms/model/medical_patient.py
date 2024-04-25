@@ -310,7 +310,7 @@ class medical_patient(models.Model):
     edema = fields.Boolean(string="Edema extr. inferiores")        
     varicose_veins = fields.Boolean(string="Varices")
 
-    #AÑADO NOTEBOOK Y CAMPOS DENTRO DE INFORMACIÓN GENERAL**************
+    #AÑADO NOTEBOOK Y CAMPOS ANALISIS ESTETICO FACIAL DENTRO DE INFORMACIÓN GENERAL**************
     #Campos Tipo de piel
     thin_skin = fields.Boolean(string="Fina")
     normal_skin = fields.Boolean(string="Normal")
@@ -404,7 +404,80 @@ class medical_patient(models.Model):
     recommended_facial = fields.Text(string="Recomiendo")
 
     #Campos Medicina estética
-    aesthetic_medicine_facial = fields.Text(string="Medicina estética")    
+    aesthetic_medicine_facial = fields.Text(string="Medicina estética")
+
+
+     #AÑADO NOTEBOOK Y CAMPOS ANALISIS ESTETICO CORPORAL DENTRO DE INFORMACIÓN GENERAL**************
+    #Campos Tejidos
+    compacted= fields.Boolean(string="Compactada")
+    relaxed= fields.Boolean(string="Relajada")
+    desigual= fields.Boolean(string="Desigual")
+    edematous_tissue = fields.Boolean(string="Edematosa")
+
+    #Campos Adiposidad
+    adiposity_location= fields.Text(string="Localización")
+   
+    #Campos Celulitis
+    edematous_cellulitis= fields.Boolean(string="Edematosa")
+    fibrous_cellulitis = fields.Boolean(string="Fibrosa")
+    sclera_cellulitis= fields.Boolean(string="Esclerótica")
+    location_cellulitis = fields.Text(string="Localización")
+
+    #Campos Flacidez
+    light_sagging= fields.Boolean(string="Ligera")
+    medium_sagging = fields.Boolean(string="Media")
+    hard_sagging= fields.Boolean(string="Fuerte")
+    muscle_sagging = fields.Boolean(string="Muscular")
+    location_sagging = fields.Text(string="Localización")
+
+    #Campos Estrías
+    white_stretch_marks= fields.Boolean(string="Blancas")
+    pink_strech_marks = fields.Boolean(string="Rosadas")
+    location_strech_marks= fields.Text(string="Localización")
+    
+    #Campos Peso
+    actual_weight= fields.Integer(string="Actual")
+    ideal_weight = fields.Integer(string="Ideal")
+    desired_weight= fields.Integer(string="Deseado")
+    imc_weight= fields.Integer(string="I.M.C.")
+    muscle_weight = fields.Integer(string="Músculo")
+    fat_weight= fields.Integer(string="Grasa")
+    visceral_fat = fields.Integer(string="Grasa visceral")
+
+    #Campos Medidas
+    waist_start_tratment= fields.Integer(string="Cintura")
+    hips_start_treatment= fields.Integer(string="Caderas")
+    nalgas_start_treatment= fields.Integer(string="Nalgas")
+    buttocks_start_treatment= fields.Integer(string="Gluteos")
+    thighs_start_treatment= fields.Integer(string="Muslos")
+    knees_start_treatment= fields.Integer(string="Rodillas")
+    calves_start_treatment= fields.Integer(string="Pantorrillas")
+    unkle_start_treatment = fields.Integer(string="Tobillos")
+    
+    waist_end_tratment= fields.Integer(string="Cintura")
+    hips_end_treatment= fields.Integer(string="Caderas")
+    nalgas_end_treatment= fields.Integer(string="Nalgas")
+    buttocks_end_treatment= fields.Integer(string="Gluteos")
+    thighs_end_treatment= fields.Integer(string="Muslos")
+    knees_end_treatment= fields.Integer(string="Rodillas")
+    calves_end_treatment= fields.Integer(string="Pantorrillas")
+    unkle_end_treatment = fields.Integer(string="Tobillos")
+    
+    #Campos Tratamiento corporal
+    treatment_corporal = fields.Text(string="Tratamiento")
+    sesions_corporal = fields.Integer(string="Número de sesiones")
+    frequency_corporal = fields.Char(string="Frecuencia")
+    start_treatment_corporal = fields.Date(string="Inicio tratamiento")
+    end_treatment_corporal = fields.Date("Fin tratamiento")
+
+    #Campos Tratamiento domiciliario
+    morning_corporal = fields.Text(string="Mañana")
+    night_corporal = fields.Text(string="Noche")
+    spullements_corporal = fields.Text(string="Suplementos")
+    recommended_corporal = fields.Text(string="Recomiendo")
+
+    #Campos Medicina estética corportal
+    aesthetic_medicine_corporal = fields.Text(string="Medicina estética")
 
     def _valid_field_parameter(self, field, name):
         return name == 'sort' or super()._valid_field_parameter(field, name)
