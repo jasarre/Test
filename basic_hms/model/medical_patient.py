@@ -21,6 +21,18 @@ class medical_patient(models.Model):
         string="Añadir archivo"
     )
 
+    #Funcinalidad botón Consentimientos para ir a firmas
+    def action_consentimiento(self):  
+        return {
+            'res_model': 'sign.template',
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'view_id': self.env.ref("sign.sign_template_view_kanban").id,
+            'target': 'self'
+        }
+
+
 
     @api.onchange('patient_id')
     def _onchange_patient(self):
