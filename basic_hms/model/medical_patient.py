@@ -300,6 +300,15 @@ class medical_patient(models.Model):
     #AÑADO CAMPOS A ESTILO DE VIDA->ADICCIONES
     smoking_comments = fields.Char(string='Comentario tabaco')
     alcohol_comments = fields.Char(string='Comentario alcohol')
+
+    #AÑADO NOTEBOOK Y CAMPOS DENTRO DE ENFERMEDADES, VISTA ALTERACIONES CIRCULATORIAS
+    cold_hands_and_feet = fields.Boolean(string="Pies y manos frías")
+    chilblains= fields.Boolean(string="Sabañones")
+    haviness_legs = fields.Boolean(string="Pesadez piernas")
+    ankle_haviness = fields.Boolean(string="Pesadez tobillos")
+    tingling = fields.Boolean(string="Hormigueos")
+    edema = fields.Boolean(string="Edema extr. inferiores")        
+    varicose_veins = fields.Boolean(string="Varices")
     
 
     def _valid_field_parameter(self, field, name):
