@@ -239,8 +239,8 @@
                                                 <field name="snack" />
                                                 <field name="water_per_day" />
                                                 <field name="comment_habitos_alimentarios" />
-                                                <field name="controlled_bowel_habit" />
-                                                <field name="controlled_bowel_habit_comment" />
+                                          <!--  <field name="controlled_bowel_habit" />
+                                                <field name="controlled_bowel_habit_comment" />-->
                                                 <field name="digestions" />
                                                 <field name="dietary_supplement" />
                                                 <field name="coffee" />
