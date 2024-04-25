@@ -84,6 +84,8 @@
         'views/medical_vaccination.xml',
         'views/res_partner.xml',
         'views/alteraciones_circulatorias.xml', 
+        'views/contactos_historial_citas.xml',
+
 
         'report/report_view.xml',
         'report/appointment_recipts_report_template.xml',
