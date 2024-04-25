@@ -1,1 +1,17 @@
-ts
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="consentimientos_firmados" model="ir.ui.view">
+        <field name="name">consentimientos_firmados.form</field>
+        <field name="model">medical.patient</field>
+        <field name="inherit_id" ref="basic_hms.medical_patients_form_view" />
+        <field name="arch" type="xml">
+           <xpath expr="//form[1]/sheet[1]/notebook[1]/page[9]" position="after">
+                <page string="Consentimientos firmados" name="consentimientos_firmados">             
+                   <group>
+                        <field name="consent_pdf" string="Consentimientos" widget=many2many_binary/> 
+                   </group>                    
+                </page>
+           </xpath>          
+        </field>
+    </record>
+</odoo>
