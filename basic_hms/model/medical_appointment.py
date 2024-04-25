@@ -25,7 +25,7 @@ class medical_appointment(models.Model):
 			('a', 'Normal'),
 			('b', 'Urgent'),
 			('c', 'Medical Emergency'),
-		], 'Urgency Level', sort=False,default="b")
+		], 'Urgency Level', sort=False,default="a")
 	appointment_date = fields.Datetime('Appointment Date',required=True,default = fields.Datetime.now)
 	appointment_end = fields.Datetime('Appointment End',required=True)
 	doctor_id = fields.Many2one('medical.physician','Physician',required=True)
@@ -43,6 +43,28 @@ class medical_appointment(models.Model):
 	medical_prescription_order_ids = fields.One2many('medical.prescription.order','appointment_id',string='Prescription')
 	insurer_id = fields.Many2one('medical.insurance','Insurer')
 	duration = fields.Integer('Duration')
+
+	consulta = fields.Selection(
+		string="Consulta", required=True,
+		selection=[
+			("Consulta 1", "Consulta 1"),
+			("Consulta 2", "Consulta 2"),
+			("Consulta 3", "Consulta 3"),
+		]
+	)
+	
+	@api.constrains('appointment_date', 'appointment_end', 'consulta')
+	def check_overplanning(self):
+		for cita in self:
+			domain = [
+				('id', '!=', cita.id),
+				('consulta', '=', cita.consulta),
+				'|', ('appointment_date', '<', cita.appointment_date), ('appointment_date', '<', cita.appointment_end),
+				'|', ('appointment_end', '>', cita.appointment_date), ('appointment_end', '>', cita.appointment_end),
+			]
+			overplanning_citas = self.search(domain)
+			if overplanning_citas:
+				raise UserError("Ya existe una cita para esta consulta en ese horario.")
  
 	def _valid_field_parameter(self, field, name):
 		return name == 'sort' or super()._valid_field_parameter(field, name)
