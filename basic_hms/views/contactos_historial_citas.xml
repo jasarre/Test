@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="contactos_historial_citas" model="ir.ui.view">
+        <field name="name">contactos_historial_citas.form</field>
+        <field name="model">medical.patient</field>
+        <field name="inherit_id" ref="basic_hms.medical_patients_form_view" />
+        <field name="arch" type="xml">
+           <xpath expr="//form[1]/sheet[1]/notebook[1]/page[2]" position="before">
+                <page string="Historial de citas" name="historial_citas">             
+                   <tree>
+                        <field name="medical_appointments_ids"/> 
+                   </tree>                    
+                </page>
+           </xpath>          
+        </field>
+    </record>
+</odoo>
