@@ -5,7 +5,7 @@
         <field name="model">medical.patient</field>
         <field name="inherit_id" ref="medical_patients_form_view" />
         <field name="arch" type="xml">            
-            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[3]" position="inside">
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[2]" position="inside">
                 <notebook>
                     <page string="Alteraciones circulatorias">
                      <group colu="2">
