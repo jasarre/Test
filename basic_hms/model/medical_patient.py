@@ -38,6 +38,12 @@ class medical_patient(models.Model):
     patient_id = fields.Many2one('res.partner',domain=[('is_patient','=',True)],string="Patient", required= True)
     name = fields.Char(string='Id', readonly=True)
     last_name = fields.Char('Last name')
+    # AÑADO CAMPOS RELACIONADOS DE CONTACTOS:VAT, PHONE, MOBILE, EMAIL
+    partner_vat = fields.Char(related='patient_id.vat', string='NIF', readonly=True)
+    partner_phone = fields.Char(related='patient_id.phone', string='Phone', readonly=True)
+    partner_mobile = fields.Char(related='patient_id.mobile', string='Mobile', readonly=True)
+    partner_email = fields.Char(related='patient_id.email', string='Email', readonly=True)
+    
     date_of_birth = fields.Date(string="Date of Birth")
     sex = fields.Selection([('m', 'Male'),('f', 'Female')], string ="Sex")
     age = fields.Char(compute=onchange_age,string="Patient Age",store=True)
