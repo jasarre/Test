@@ -5,8 +5,7 @@
         <field name="model">medical.patient</field>
         <field name="inherit_id" ref="basic_hms.medical_patients_form_view" />
         <field name="arch" type="xml">
-     <!--  <xpath expr="//form[1]/sheet[1]/notebook[1]/page[9]" position="after">-->
-           <xpath expr="//form[1/sheet[1]/notebook[1]" position="inside">   
+           <xpath expr="//form[1]/sheet[1]/notebook[1]/page[5]" position="after">
 
                 <page string="Consentimientos firmados" name="consentimientos_firmados">             
                    <group>
