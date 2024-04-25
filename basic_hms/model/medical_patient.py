@@ -286,14 +286,15 @@ class medical_patient(models.Model):
     bowel_habit_comment = fields.Char(string='Comentario hábito instestinal')
     digestions= fields.Char(string='Digestiones')
     dietary_supplement = fields.Char(string='Comp. alimenticio')
-
-    #AÑADO CAMPO date_admited 
-    date_admitted = fields.Date(string="Fecha alta", default=lambda self: fields.Date.today())
-
+    
+    
     #AÑADO CAMPOS QUE SE INCORPORAN A INFORMACIÓN GENERAL
     blood_pressure = fields.Char(string='Tensión arterial')
     operations = fields.Char(string='Operaciones')
     aesthetic_operations = fields.Char(string='Operaciones de estética')
+    origin = fields.Selection([('w','Web'),('v','Venta física'),('e','Evento'),('o','Otros')],string='Procedencia')
+    date_admitted = fields.Date(string="Fecha alta", default=lambda self: fields.Date.today())
+    
     
 
     def _valid_field_parameter(self, field, name):
