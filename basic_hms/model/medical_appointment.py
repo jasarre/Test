@@ -67,7 +67,8 @@ class medical_appointment(models.Model):
 				raise UserError("Ya existe una cita para esta consulta en ese horario.")
  
 	def _valid_field_parameter(self, field, name):
-		return name == 'sort' or super()._valid_field_parameter(field, name)
+		#return name == 'sort' or super()._valid_field_parameter(field, name)
+		return name == 'sort' or super(medical_appointment, self)._valid_field_parameter(field, name)
 
 	@api.onchange('patient_id')
 	def onchange_name(self):
