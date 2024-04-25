@@ -9,6 +9,11 @@
                     <header>
                         <button name="print_report" type="object"
                             string="Print Patient Card" class="oe_highlight" />
+
+                        <!--Añadido en el .py también para el método-->    
+                        <button name="action_consentimiento" type="object"
+                            string="Consentimientos" class="oe_highlight" />
+
                     </header>
                     <sheet>
                         <group>
