@@ -309,7 +309,20 @@ class medical_patient(models.Model):
     tingling = fields.Boolean(string="Hormigueos")
     edema = fields.Boolean(string="Edema extr. inferiores")        
     varicose_veins = fields.Boolean(string="Varices")
-    
+
+    #AÑADO VISTA HEREDADA CON NOTEBOOK Y CAMPOS DENTRO DE INFORMACIÓN GENERAL (alalisis_facial.xml)
+    thin_skin = fields.Boolean(string="Fina")
+    normal_skin = fields.Boolean(string="Normal")
+    thick_skin = fields.Boolean(string="Gruesa")
+    dry_skin = fields.Boolean(string="Seca")
+    mixed_skin = fields.Boolean(string="Mixta")
+    dehydrated_skin = fields.Boolean(string="Deshidratada")
+    poisoned_skin = fields.Boolean(string="Intoxicada")
+    oily_skin = fields.Boolean(string="Grasa")
+    devitalized_skin = fields.Boolean(string="Desvitalizada")
+    sensitive_skin = fields.Boolean(string="Sensible")
+    acneic_skin = fields.Boolean(string="Acneica")
+    comments_skin= fields.Text(string="Comentario")
 
     def _valid_field_parameter(self, field, name):
         return name == 'sort' or super()._valid_field_parameter(field, name)
