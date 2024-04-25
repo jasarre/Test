@@ -274,8 +274,8 @@
                                                     <group>
                                                         <field
                                                             name="smoking" />
-                                                        <field name="smoking_comments" />
-
+                                                        <field 
+                                                            name="smoking_comments" />
                                                         <field
                                                             name="smoking_number" />
                                                         <field
@@ -288,6 +288,8 @@
                                                             name="age_quit_smoking" />
                                                         <field
                                                             name="alcohol" />
+                                                        <field
+                                                            name="alcohol_comments" />
                                                         <field
                                                             name="ex_alcoholic" />
                                                         <field
