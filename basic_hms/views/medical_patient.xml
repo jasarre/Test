@@ -232,6 +232,14 @@
                                             <group>
                                                 <field name="number_of_meals" />
                                                 <field name="eats_alone" />
+                                                <field name="breackfast" />
+                                                <field name="lunch" />
+                                                <field name="dinner" />
+                                                <field name="midmorning" />
+                                                <field name="snack" />
+                                                <field name="water_per_day" />
+                                                <field name="comment_habitos_alimentarios" />
+
                                                 <field name="coffee" />
                                                 <field name="coffee_cups" />
                                             </group>
