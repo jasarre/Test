@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="alteraciones_circulatorias" model="ir.ui.view">
+        <field name="name">medical.patients.form.inherited</field>
+        <field name="model">medical.patient</field>
+        <field name="inherit_id" ref="medical_patients_form_view" />
+        <field name="arch" type="xml">            
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[3]" position="inside">
+                <notebook>
+                    <page string="Alteraciones circulatorias">
+                     <group colu="2">
+                      <group>
+                        <field name="cold_hands_and_feet" />
+                        <field name="chilblains" />
+                        <field name="haviness_legs" />
+                      </group>
+                      <group>
+                        <field name="ankle_haviness" />
+                        <field name="tingling" />
+                        <field name="edema" /> 
+                        <field name="varicose_veins" />
+                      </group>
+                     </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>
