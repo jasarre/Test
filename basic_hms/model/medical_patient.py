@@ -286,6 +286,8 @@ class medical_patient(models.Model):
     bowel_habit_comment = fields.Char(string='Comentario hábito instestinal')
     digestions= fields.Char(string='Digestiones')
     dietary_supplement = fields.Char(string='Comp. alimenticio')
+    te = fields.Boolean('Te')
+    te_cups = fields.Integer(string='Tazas por día')
     
     
     #AÑADO CAMPOS QUE SE INCORPORAN A INFORMACIÓN GENERAL
@@ -294,7 +296,9 @@ class medical_patient(models.Model):
     aesthetic_operations = fields.Char(string='Operaciones de estética')
     origin = fields.Selection([('w','Web'),('v','Venta física'),('e','Evento'),('o','Otros')],string='Procedencia')
     date_admitted = fields.Date(string="Fecha alta", default=lambda self: fields.Date.today())
-    
+
+    #AÑADO CAMPOS A ESTILO DE VIDA->ADICCIONES
+    smoking_comments = fields.Char(string='Comentario tabaco')
     
 
     def _valid_field_parameter(self, field, name):
