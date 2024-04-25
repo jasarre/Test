@@ -310,7 +310,8 @@ class medical_patient(models.Model):
     edema = fields.Boolean(string="Edema extr. inferiores")        
     varicose_veins = fields.Boolean(string="Varices")
 
-    #AÑADO VISTA HEREDADA CON NOTEBOOK Y CAMPOS DENTRO DE INFORMACIÓN GENERAL (alalisis_facial.xml)
+    #AÑADO NOTEBOOK Y CAMPOS DENTRO DE INFORMACIÓN GENERAL**************
+    #Campos Tipo de piel
     thin_skin = fields.Boolean(string="Fina")
     normal_skin = fields.Boolean(string="Normal")
     thick_skin = fields.Boolean(string="Gruesa")
@@ -323,6 +324,87 @@ class medical_patient(models.Model):
     sensitive_skin = fields.Boolean(string="Sensible")
     acneic_skin = fields.Boolean(string="Acneica")
     comments_skin= fields.Text(string="Comentario")
+
+    #Campos Inesteticismos faciales
+    wrinkles = fields.Boolean(string="Arrugas")
+    asphyctic = fields.Boolean(string="Asfíctica")
+    pores= fields.Boolean(string="Poros")
+    coupe= fields.Boolean(string="Coupe")
+    acne= fields.Boolean(string="Acné")
+    flaccidity = fields.Boolean(string="Flacidez")
+    ptosis = fields.Boolean(string="Ptosis")
+    fragile = fields.Boolean(string="Frágil")
+    comedones = fields.Boolean(string="Comedones")
+    tallow = fields.Boolean(string="Sebo")
+    millums = fields.Boolean(string="Millums")
+    reactive = fields.Boolean(string="Reactiva")
+    
+    #Campos Dilatación de poros
+    normal = fields.Boolean(string="Normal")
+    dilated = fields.Boolean(string="Dilatados")
+    very_dilated= fields.Boolean(string="Muy dilatados")
+    
+    #Campos Alteraciones microcirculación
+    erythrosis= fields.Boolean(string="Enroj. o eritrosis")
+    dilated_capillaries = fields.Boolean(string="Capilares dilatados")
+    caparrosa= fields.Boolean(string="Caparrosa")
+    
+    #Campos Manchas en la piel
+    dark= fields.Boolean(string="Oscuras")
+    clear = fields.Boolean(string="Claras")
+    lack_of_pigmentation= fields.Boolean(string="Falta de pigmentación")
+    
+    #Campos Flacidez
+    in_the_face= fields.Boolean(string="En el rostro")
+    in_the_eloval = fields.Boolean(string="En el elóovalo")
+    in_the_neck= fields.Boolean(string="En el cuello")
+ 
+    #Campos Alteraciones general de la piel
+    pupulas= fields.Boolean(string="Púpulas")
+    papules = fields.Boolean(string="Pápulas")
+    scars= fields.Boolean(string="Cicatrices")
+    brands = fields.Boolean(string="Marcas")
+    hair_in_the_face= fields.Boolean(string="Vellos en el rostro")
+    
+    #Campos Respuestas de la piel al sol o fototipos cutáneos
+    red_skin= fields.Boolean(string="Se enrojece y no se broncea")
+    pigmented_skin = fields.Boolean(string="Se enrojece y después se broncea")
+    tan_skin= fields.Boolean(string="Se broncea")
+
+    #Campos Arrugas y líneas
+    around_mouth_and_eyes= fields.Boolean(string="Sólo alrededor de boca y ojos")
+    forehead = fields.Boolean(string="Frente")
+    glabella= fields.Boolean(string="Glavela")
+    nasolabial_folds = fields.Boolean(string="Surcos nasogenianos")
+    
+    #Campos Contorno de ojos
+    bags= fields.Boolean(string="Bolsas")
+    baggy_eyes = fields.Boolean(string="Ojeras")
+    wrinkles_eye= fields.Boolean(string="Arrugas")
+    sagging_upper_eyelid = fields.Boolean(string="Flac.párpado superior")
+    
+    #Campos Pelos supérfluos
+    normal_hairs= fields.Boolean(string="Normal")
+    hirsutism = fields.Boolean(string="Hirsutismo")
+    hypertrichosis= fields.Boolean(string="Hipertricosis")
+    location = fields.Char(string="Localización")
+    type_hair_removal = fields.Char(string ="Tipo depilación")
+    
+    #Campos Tratamiento facial
+    treatment_facial = fields.Text(string="Tratamiento")
+    sesions_facial = fields.Integer(string="Número de sesiones")
+    frequency_facial = fields.Char(string="Frecuencia")
+    start_treatment_facial = fields.Date(string="Inicio tratamiento")
+    end_treatment_facial = fields.Date(string="Fin tratamiento")
+    
+    #Campos Tratamiento domiciliario
+    morning_facial = fields.Text(string="Mañana")
+    night_facial = fields.Text(string="Noche")
+    spullements_facial = fields.Text(string="Suplementos")
+    recommended_facial = fields.Text(string="Recomiendo")
+
+    #Campos Medicina estética
+    aesthetic_medicine_facial = fields.Text(string="Medicina estética")    
 
     def _valid_field_parameter(self, field, name):
         return name == 'sort' or super()._valid_field_parameter(field, name)
