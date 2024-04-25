@@ -12,6 +12,7 @@ class medical_patient(models.Model):
     _description = 'medical patient'
     _rec_name = 'patient_id'
 
+    #Agregar pdf en Consentimientos
     consent_pdf = fields.Many2many(
         comodel_name='ir.attachment',
         relation='patient_consent_image_rel',
