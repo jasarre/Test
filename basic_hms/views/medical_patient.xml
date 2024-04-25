@@ -67,6 +67,10 @@
                                     <group>
                                         <field name="blood_type" />
                                         <field name="current_insurance_id" />
+                                        <field name="blood_pressure" />     
+                                        <field name="operations" />
+                                        <field name="aesthetic_operations" />
+
                                     </group>
                                     <group>
                                         <field name="rh" />
