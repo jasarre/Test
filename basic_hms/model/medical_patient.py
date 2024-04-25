@@ -310,6 +310,12 @@ class medical_patient(models.Model):
     edema = fields.Boolean(string="Edema extr. inferiores")        
     varicose_veins = fields.Boolean(string="Varices")
 
+    #AÑADO CAMPOS QUE SE INCORPORAN A GINECO/OBSERVACIONES MÉDICAS
+    menstrual_cycles = fields.Selection([('r', 'Regular'),('i', 'Irregular')], string ="Ciclos menstruales")
+    days_of_menstruation = fields.Integer('Número de días')
+    menstrual_type = fields.Selection([('n', 'Normal'),('a', 'Abundante')], string ="Tipo de menstruación")
+    menstrual_comments = fields.Char(string='Comentarios')
+
     #AÑADO NOTEBOOK Y CAMPOS ANALISIS ESTETICO FACIAL DENTRO DE INFORMACIÓN GENERAL**************
     #Campos Tipo de piel
     thin_skin = fields.Boolean(string="Fina")
