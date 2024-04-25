@@ -182,7 +182,11 @@
                                     <group string="General">
                                         <field name="fertile" />
                                         <field name="currently_pregnant" />
+                                        <field name="menstrual_cycles" />
                                         <field name="menarche" />
+                                        <field name="days_of_menstruation"/>
+                                        <field name="menstrual_type"/>
+                                        <field name="menstrual_comments"/>
                                         <field name="menopausal" />
                                         <field name="menopause" />
                                     </group>
