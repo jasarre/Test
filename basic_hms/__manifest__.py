@@ -86,6 +86,7 @@
         'views/alteraciones_circulatorias.xml', 
         'views/contactos_historial_citas.xml',
         'views/analisis_facial.xml',
+        'views/consentimientos_firmados.xml',
 
         'report/report_view.xml',
         'report/appointment_recipts_report_template.xml',
