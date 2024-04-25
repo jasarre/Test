@@ -282,7 +282,7 @@ class medical_patient(models.Model):
     snack = fields.Char(string='Merienda')
     water_per_day = fields.Integer(string='Litros de agua al día')
     comment_habitos_alimentarios = fields.Text(string="Comentario sobre hábitos alimentarios")
-    controlled_bowel_habit = fields.Boolean(string='Hábito intestinal controlado')
+    bowel_habit = fields.Boolean(string='Hábito intestinal controlado')
     controlled_bowel_habit_comment = fields.Char(string='Comentario hábito instestinal')
     digestions= fields.Char(string='Digestiones')
     dietary_supplement = fields.Char(string='Comp. alimenticio')
