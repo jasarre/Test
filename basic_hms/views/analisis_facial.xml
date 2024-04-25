@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="analisis_facial" model="ir.ui.view">
+        <field name="name">medical.patients.form.inherited</field>
+        <field name="model">medical.patient</field>
+        <field name="inherit_id" ref="medical_patients_form_view" />
+        <field name="arch" type="xml">            
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]" position="inside">
+                <notebook>
+                    <page string="ANÁLISIS ESTÉTICO FACIAL">
+                        <notebook>
+                            <page string="Tipo de piel">
+                                <group colu="2">
+                                  <group>
+                                    <field name="thin_skin" />
+                                    <field name="normal_skin" />
+                                    <field name="thick_skin" />
+                                    <field name="dry_skin" />
+                                    <field name="mixed_skin" />
+                                  </group>
+                                  <group>
+                                    <field name="dehydrated_skin" />
+                                    <field name="poisoned_skin" />
+                                    <field name="devitalized_skin" />
+                                    <field name="thin_skin" />
+                                    <field name="acneic_skin" />
+                                    <field name="comments_skin" />
+                                  </group>
+                                </group>
+                            </page>
+
+                            <page string="Inesteticismos faciales">
+                                <group colu="2">
+                                  <group>
+                                      <field name="wrinkles" />
+                                      <field name="asphyctic" />
+                                      <field name="pores" />
+                                      <field name="coupe" />
+                                      <field name="acne" />
+                                      <field name="flaccidity" />
+                                  </group>
+                                  <group>
+                                      <field name="ptosis" />
+                                      <field name="fragile" />
+                                      <field name="comedones" />
+                                      <field name="tallow" />
+                                      <field name="millums" />
+                                      <field name="reactive" />
+                                  </group>
+                                </group>
+                            </page>
+
+                            <page string="Dilatación de los poros">
+                                <group>
+                                    <field name="normal" />
+                                    <field name="dilated" />
+                                    <field name="very_dilated" />
+                                </group>
+                            </page>
+
+                            <page string="Alteraciones microcirculación">
+                                <group>
+                                    <field name="erythrosis" />
+                                    <field name="dilated_capillaries" />
+                                    <field name="caparrosa" />
+                                </group>
+                            </page>
+
+                            <page string="Manchas en la piel">
+                                <group>
+                                    <field name="dark" />
+                                    <field name="clear" />
+                                    <field name="lack_of_pigmentation" />
+                                </group>
+                            </page>
+
+                          <page string="Flacidez">
+                                <group>
+                                    <field name="in_the_face" />
+                                    <field name="in_the_eloval" />
+                                    <field name="in_the_neck" />
+                                </group>
+                            </page>
+
+                          <page string="Alteraciones generales de la piel">
+                                <group colu="2">
+                                  <group>
+                                      <field name="pupulas" />
+                                      <field name="papules" />
+                                      <field name="scars" />                                     
+                                  </group>
+                                  <group>
+                                      <field name="brands" />
+                                      <field name="hair_in_the_face" />
+                                  </group>
+                                </group>
+                            </page>
+
+                          <page string="Respuestas de la piel al sol o fototipos cutáneos">
+                                <group>
+                                    <field name="red_skin" />
+                                    <field name="pigmented_skin" />
+                                    <field name="tan_skin" />
+                                </group>
+                            </page>
+
+                          <page string="Arrugas y líneas">
+                                <group>
+                                    <field name="around_mouth_and_eyes" />
+                                    <field name="forehead" />
+                                    <field name="glabella" />
+                                    <field name="nasolabial_folds" />
+                                </group>
+                            </page>
+
+                          <page string="Contorno de ojos">
+                                <group>
+                                    <field name="bags" />
+                                    <field name="baggy_eyes" />
+                                    <field name="wrinkles_eye" />
+                                    <field name="sagging_upper_eyelid" />
+                                </group>
+                            </page>
+
+                          <page string="Pelos supérfluos">
+                                <group colu="2">
+                                  <group>
+                                      <field name="normal_hairs" />
+                                      <field name="hirsutism" />
+                                      <field name="hypertrichosis" />                                     
+                                  </group>
+                                  <group>
+                                      <field name="location" />
+                                      <field name="type_hair_removal" />
+                                  </group>
+                                </group>
+                            </page>
+
+                          <page string="Tratamiento facial">
+                                <group colu="2">
+                                  <group>
+                                      <field name="treatment_facial" />
+                                      <field name="sesions_facial" />
+                                      <field name="frequency_facial" />                                     
+                                  </group>
+                                  <group>
+                                      <field name="start_treatment_facial" />
+                                      <field name="end_treatment_facial" />
+                                  </group>
+                                </group>
+                            </page>
+
+                          <page string="Tratamiento domiciliario">
+                                <group>
+                                    <field name="morning_facial" />
+                                    <field name="night_facial" />
+                                    <field name="spullements_facial" />
+                                    <field name="recommended_facial" />
+                                </group>
+                            </page>
+
+                          <page string="Medicina estética">
+                                <group>
+                                    <field name="aesthetic_medicine_facial" />
+                                </group>
+                            </page>
+                          
+                        </notebook>
+                    </page>
+
+                    <page string="ANÁLISIS ESTÉTICO CORPORAL">
+                        <notebook>
+                            <page string="Tejido">
+                                <group>
+                                    <field name="compacted" />
+                                    <field name="relaxed" />
+                                    <field name="desigual" />
+                                    <field name="edematous_tissue" />
+                                </group>
+                            </page>
+
+                            <page string="Adiposidad">
+                                <group>
+                                     <field name="adiposity_location" />
+                                </group>
+                            </page>
+
+                            <page string="Celulitis">
+                                <group>
+                                    <field name="edematous_cellulitis" />
+                                    <field name="fibrous_cellulitis" />
+                                    <field name="sclera_cellulitis" />
+                                    <field name="location_cellulitis" />
+                                </group>
+                            </page>
+
+                            <page string="Flacidez">
+                                <group>
+                                    <field name="light_sagging" />
+                                    <field name="medium_sagging" />
+                                    <field name="hard_sagging" />
+                                    <field name="muscle_sagging" />
+                                    <field name="location_sagging" />
+                                </group>
+                            </page>
+
+                            <page string="Estrías">
+                                <group>
+                                    <field name="white_stretch_marks" />
+                                    <field name="pink_strech_marks" />
+                                    <field name="location_strech_marks" />
+                                </group>
+                            </page>
+
+                            <page string="Peso">
+                                <group colu="2">
+                                  <group>
+                                      <field name="actual_weight" />
+                                      <field name="ideal_weight" />
+                                      <field name="desired_weight" />                                     
+                                  </group>
+                                  <group>
+                                      <field name="imc_weight" />
+                                      <field name="muscle_weight" />
+                                      <field name="fat_weight" />
+                                      <field name="visceral_fat" />
+                                  </group>
+                                </group>
+                            </page>
+
+                            <page string="Medidas">
+                                <group colu="2" >
+                                  <group string ="Inicio tratamiento">
+                                      <field name="waist_start_tratment" />
+                                      <field name="hips_start_treatment" />
+                                      <field name="nalgas_start_treatment" /> 
+                                      <field name="buttocks_start_treatment" />                                   
+                                      <field name="thighs_start_treatment" />
+                                      <field name="knees_start_treatment" />
+                                      <field name="calves_start_treatment" />
+                                      <field name="unkle_start_treatment" />
+                                  </group>                                
+                                  <group string="Fin tratamiento">
+                                      <field name="waist_end_tratment" />
+                                      <field name="hips_end_treatment" />
+                                      <field name="nalgas_end_treatment" /> 
+                                      <field name="buttocks_end_treatment" />                                   
+                                      <field name="thighs_end_treatment" />
+                                      <field name="knees_end_treatment" />
+                                      <field name="calves_end_treatment" />
+                                      <field name="unkle_end_treatment" />
+                                  </group>
+                                </group>
+                            </page>
+
+                            <page string="Tratamiento corporal">
+                                <group>
+                                    <field name="treatment_corporal" />
+                                    <field name="sesions_corporal" />
+                                    <field name="frequency_corporal" /> 
+                                    <field name="start_treatment_corporal" /> 
+                                    <field name="end_treatment_corporal" /> 
+                                </group>
+                            </page>
+
+                            <page string="Tratamiento domiciliario">
+                                <group>
+                                    <field name="morning_corporal" />
+                                    <field name="night_corporal" />
+                                    <field name="spullements_corporal" /> 
+                                    <field name="recommended_corporal" /> 
+                                </group>
+                            </page>
+
+                            <page string="Medicina estética">
+                                <group>
+                                     <field name="aesthetic_medicine_corporal" /> 
+                                </group>
+                            </page>
+                        </notebook>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>
