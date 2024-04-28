@@ -262,7 +262,7 @@
                                                 <field name="digestions" />
                                                 <field name="dietary_supplement" />
                                                 <field name="coffee" />
-                                                <field name="coffee_cups" invisible ="not cofee" required="cofee == 1" />
+                                                <field name="coffee_cups" invisible ="not coffee" required="coffee == 1" />
                                                 <field name="te" />                                              
                                                 <field name="te_cups" invisible ="not te" required="te == 1"/>    
 
