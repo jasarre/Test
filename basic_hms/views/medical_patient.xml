@@ -263,7 +263,8 @@
                                                 <field name="coffee" />
                                                 <field name="coffee_cups" />
                                                 <field name="te" />
-                                                <field name="te_cups" modifiers="{'invisible': [('te', '=', False)]}" /> 
+                                              <!--  <field name="te_cups" modifiers="{'invisible': [('te', '=', False)]}" /> -->
+                                                <field name="te_cups" invisible ="not te" required="te == 1"/>    
 
                                             </group>
                                             <group>
