@@ -188,7 +188,8 @@
                                 <group string="Gyneco">
                                     <group string="General">
                                         <field name="fertile" />
-                                        <field name="currently_pregnant" />
+                                    <!--    <field name="currently_pregnant" />-->
+                                             <field name="current_pregnant" invisible ="sex == Male" required="sex == Female"/>  
                                         <field name="menstrual_cycles" />
                                         <field name="menarche" />
                                         <field name="days_of_menstruation"/>
