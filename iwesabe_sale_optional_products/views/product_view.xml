@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="form_product_template_inherit_optional" model="ir.ui.view">
+			<field name="name">product.template_form_optional</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view" />
+			<field name="arch" type="xml">
+				<page name="sales" position="inside">
+					<group string="Optional Products (SALE LINE)">
+						<field name="optional_prod_ids" string="Product Options" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+					</group>
+				</page>
+			</field>
+		</record>
+	</data>
+</odoo>
