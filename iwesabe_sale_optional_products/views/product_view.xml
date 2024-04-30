@@ -8,7 +8,8 @@
 			<field name="arch" type="xml">
 				<page name="sales" position="inside">
 					<group string="Optional Products (SALE LINE)">
-						<field name="optional_prod_ids" string="Product Options" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+				<!--		<field name="optional_prod_ids" string="Product Options" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>-->
+						<field name="optional_prod_ids" string="Product Options" widget="many2many_tags", ('company_id', '=', company_id), ('company_id', '=', False)]"/>
 					</group>
 				</page>
 			</field>
